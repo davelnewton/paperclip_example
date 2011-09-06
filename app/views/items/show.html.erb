@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<div style="float: left;">
+  <%#= image_tag @item.image.url %>
+  <%= image_tag @item.image.url(:medium) %>
+  <%= image_tag @item.image.url(:thumb) %>
+</div>
+
+<div style="float: right;">
+  <b>Name:</b>
+  <%= @item.name %>
+</div>
+
+<p>
+  <b>Description:</b>
+  <%= @item.description %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
